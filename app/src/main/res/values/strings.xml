@@ -1,0 +1,103 @@
+<resources>
+    <string name="app_name" translatable="false">vehiclePartsShop</string>
+    <string name="title_home">Home</string>
+    <string name="content_description_categories_button">categories button</string>
+    <string name="title_categories">Categories</string>
+    <string name="content_description_favorites_button">favorites button</string>
+    <string name="title_favorites">favorites</string>
+    <string name="content_description_gifts_button">gifts button</string>
+    <string name="title_gifts">gifts</string>
+    <string name="content_description_best_selling_button">best_selling button</string>
+    <string name="title_best_selling">best selling</string>
+    <string name="title_sale">On sale</string>
+    <string name="title_sale_percent" translatable="false">50%</string>
+    <string name="content_description_first_on_sale_item_button">first on sale item button</string>
+    <string name="content_description_second_on_sale_item_button">second on sale item button</string>
+    <string name="bottom_bar_home">Home</string>
+    <string name="bottom_bar_search">Search</string>
+    <string name="bottom_bar_cart">Cart</string>
+    <string name="bottom_bar_account">Account</string>
+    <string name="content_description_back_button">back button</string>
+    <string name="title_all">All</string>
+    <string name="title_tires">Tires</string>
+    <string name="tile_brake_discs">Brake discs</string>
+    <string name="title_pads">Pads</string>
+    <string name="title_chassis">Chassis</string>
+    <string name="title_engine">Engine</string>
+    <string name="sort_by_price">Sort by price</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="favorites">Favorites</string>
+    <string name="nothing_here">Nothing here</string>
+    <string name="title_cart">Cart</string>
+    <string name="search">Search</string>
+    <string name="account">Account</string>
+    <string name="logout">Logout</string>
+    <string name="cart">Cart</string>
+    <string name="checkout">checkout</string>
+    <string name="byn">byn</string>
+    <string name="total">total:</string>
+
+    <string-array name="categories">
+        <item>All</item>
+        <item>Tires</item>
+        <item>Brake discs</item>
+        <item>Pads</item>
+        <item>Chassis</item>
+        <item>Engine</item>
+    </string-array>
+
+    <string-array name="tires_description">
+        <item>Width</item>
+        <item>Tire profile</item>
+        <item>Diameter</item>
+        <item>Brand name</item>
+        <item>Name</item>
+        <item>Load index</item>
+        <item>Speed index</item>
+        <item>Article</item>
+    </string-array>
+
+    <string-array name="brake_discs_description">
+        <item>Thickness</item>
+        <item>Height</item>
+        <item>Diameter</item>
+        <item>Manufacturer</item>
+        <item>Name</item>
+        <item>Center bore</item>
+        <item>Number of holes</item>
+        <item>Article</item>
+    </string-array>
+
+    <string-array name="pads_description">
+        <item>Width</item>
+        <item>Height</item>
+        <item>Thickness</item>
+        <item>Manufacturer</item>
+        <item>Name</item>
+        <item>Wear indicator</item>
+        <item>Material</item>
+        <item>Article</item>
+    </string-array>
+
+    <string-array name="chassis_description">
+        <item>Length</item>
+        <item>Diameter</item>
+        <item>Position</item>
+        <item>Manufacturer</item>
+        <item>Name</item>
+        <item>Side</item>
+        <item>Type</item>
+        <item>Article</item>
+    </string-array>
+
+    <string-array name="engine_description">
+        <item>Displacement</item>
+        <item>Power</item>
+        <item>Torque</item>
+        <item>Manufacturer</item>
+        <item>Name</item>
+        <item>Fuel type</item>
+        <item>Number of cylinders</item>
+        <item>Article</item>
+    </string-array>
+</resources>

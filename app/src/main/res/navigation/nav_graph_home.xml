@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_dashboard"
+    app:startDestination="@id/HomeFragment">
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.example.carpartsshop.ui.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_HomeFragment_to_CategoriesFragment"
+            app:destination="@id/CategoriesFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_FavoritesFragment"
+            app:destination="@id/FavoritesFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_GiftsFragment"
+            app:destination="@id/GiftsFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_BestSellingFragment"
+            app:destination="@id/BestSellingFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_SelectedCategoryFragment"
+            app:destination="@id/SelectedCategoryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/FavoritesFragment"
+        android:name="com.example.carpartsshop.ui.home.favorites.FavoritesFragment"
+        android:label="FavoritesFragment"
+        tools:layout="@layout/fragment_favorites">
+        <action
+            android:id="@+id/action_FavoritesFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+        <action
+            android:id="@+id/action_FavoritesFragment_to_ProductDescription"
+            app:destination="@id/ProductDescription" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/GiftsFragment"
+        android:name="com.example.carpartsshop.ui.home.gifts.GiftsFragment"
+        android:label="GiftsFragment"
+        tools:layout="@layout/fragment_gifts">
+        <action
+            android:id="@+id/action_GiftsFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/BestSellingFragment"
+        android:name="com.example.carpartsshop.ui.home.bestselling.BestSellingFragment"
+        android:label="BestSellingFragment"
+        tools:layout="@layout/fragment_best_selling">
+        <action
+            android:id="@+id/action_BestSellingFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/CategoriesFragment"
+        android:name="com.example.carpartsshop.ui.home.categories.CategoriesFragment"
+        android:label="CategoriesFragment"
+        tools:layout="@layout/fragment_categories">
+        <action
+            android:id="@+id/action_CategoriesFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+
+        <action
+            android:id="@+id/action_CategoriesFragment_to_SelectedCategoryFragment"
+            app:destination="@id/SelectedCategoryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SelectedCategoryFragment"
+        android:name="com.example.carpartsshop.ui.home.selectedCategory.SelectedCategoryFragment"
+        android:label="SelectedCategoryFragment"
+        tools:layout="@layout/fragment_selected_category">
+        <argument
+            android:name="categoryName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_SelectedCategoryFragment_to_CategoriesFragment"
+            app:destination="@id/CategoriesFragment" />
+        <action
+            android:id="@+id/action_SelectedCategoryFragment_to_ProductDescription"
+            app:destination="@id/ProductDescription" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ProductDescription"
+        android:name="com.example.carpartsshop.ui.home.productdescription.ProductDescriptionFragment"
+        android:label="ProductDescription"
+        tools:layout="@layout/fragment_product_description">
+        <argument
+            android:name="selectedCategoryItem"
+            app:argType="com.example.carpartsshop.ui.home.selectedCategory.SelectedCategoryItem" />
+        <action
+            android:id="@+id/action_ProductDescription_to_SelectedCategoryFragment"
+            app:destination="@id/SelectedCategoryFragment" />
+    </fragment>
+</navigation>
