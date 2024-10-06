@@ -7,7 +7,8 @@ data class SelectedCategoryItem(
     val titleImage : Int,
     val name: String,
     val price: Int,
-    val type: ProductType) : Parcelable {
+    val type: ProductType
+) : Parcelable {
 
     var isInFavorites = false
     var isInCart = false

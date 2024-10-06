@@ -10,7 +10,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.carpartsshop.R
 import com.example.carpartsshop.databinding.FragmentFavoritesBinding
-import com.example.carpartsshop.ui.home.selectedCategory.SelectedCategoryFragmentDirections
 import com.example.carpartsshop.ui.home.selectedCategory.SelectedCategoryItem
 
 class FavoritesFragment :

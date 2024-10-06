@@ -9,7 +9,7 @@ import com.example.carpartsshop.R
 
 class CategoriesAdapter(
     private val titles: List<String>,
-    private val listener: RecyclerViewEvent
+    private val listener: CategoriesAdapter.RecyclerViewEvent
 ) : RecyclerView.Adapter<CategoriesAdapter.CategoriesViewHolder>()  {
     inner class CategoriesViewHolder(itemView: View) :
         RecyclerView.ViewHolder(itemView),
@@ -27,7 +27,7 @@ class CategoriesAdapter(
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoriesViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoriesAdapter.CategoriesViewHolder {
         val itemView =
             LayoutInflater.from(parent.context)
                 .inflate(R.layout.item_category, parent, false)
@@ -38,7 +38,7 @@ class CategoriesAdapter(
         return titles.size;
     }
 
-    override fun onBindViewHolder(holder: CategoriesViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CategoriesAdapter.CategoriesViewHolder, position: Int) {
         holder.title.text = titles[position]
     }
 

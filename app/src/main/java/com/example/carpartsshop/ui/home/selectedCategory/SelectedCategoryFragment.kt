@@ -55,11 +55,6 @@ class SelectedCategoryFragment:
     }
 
     override fun onItemClick(item: SelectedCategoryItem) {
-        SelectedCategoryFragment().apply {
-            arguments = Bundle().apply {
-                putString(categoryNameBundleKey, categoryName)
-            }
-        }
         val action = SelectedCategoryFragmentDirections.actionSelectedCategoryFragmentToProductDescription(item)
         findNavController().navigate(action)
     }

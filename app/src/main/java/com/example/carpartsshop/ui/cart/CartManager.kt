@@ -12,21 +12,21 @@ class CartManager private constructor(context: Context) {
 
     private var cartList: MutableList<SelectedCategoryItem> = mutableListOf()
 
-    fun addToFavorites(item: SelectedCategoryItem) {
+    fun addToCart(item: SelectedCategoryItem) {
         cartList.add(item)
-        saveFavoritesList()
+        saveCart()
     }
 
-    fun removeFromFavorites(item: SelectedCategoryItem) {
+    fun removeFromCart(item: SelectedCategoryItem) {
         cartList.remove(item)
-        saveFavoritesList()
+        saveCart()
     }
 
-    fun getFavoritesList(): List<SelectedCategoryItem> {
-        return loadFavoritesList().toList()
+    fun getCart(): List<SelectedCategoryItem> {
+        return loadCart().toList()
     }
 
-    private fun loadFavoritesList(): MutableList<SelectedCategoryItem> {
+    private fun loadCart(): MutableList<SelectedCategoryItem> {
         val favoritesJson = sharedPreferences.getString("favorites", "")
         return if (favoritesJson.isNullOrEmpty()) {
             mutableListOf()
@@ -35,7 +35,7 @@ class CartManager private constructor(context: Context) {
         }
     }
 
-    private fun saveFavoritesList() {
+    private fun saveCart() {
         val favoritesJson = Gson().toJson(cartList)
         sharedPreferences.edit().putString("favorites", favoritesJson).apply()
     }

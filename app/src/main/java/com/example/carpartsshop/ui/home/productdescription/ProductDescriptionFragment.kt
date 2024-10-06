@@ -16,7 +16,6 @@ import com.example.carpartsshop.databinding.FragmentProductDescriptionBinding
 import com.example.carpartsshop.ui.cart.CartManager
 import com.example.carpartsshop.ui.home.favorites.FavoritesManager
 import com.example.carpartsshop.ui.home.selectedCategory.ProductType
-import com.example.carpartsshop.ui.home.selectedCategory.SelectedCategoryFragmentDirections
 import com.example.carpartsshop.ui.home.selectedCategory.SelectedCategoryItem
 
 class ProductDescriptionFragment : Fragment() {
@@ -104,12 +103,12 @@ class ProductDescriptionFragment : Fragment() {
             )
 
             if (!selectedItem.isInCart) {
-                selectedItem.let { item -> cartManager.addToFavorites(item) }
+                selectedItem.let { item -> cartManager.addToCart(item) }
                 selectedItem.isInCart = true
 
                 setCartButtonColorAndImage(selectedItem)
             } else {
-                selectedItem.let { item -> cartManager.removeFromFavorites(item) }
+                selectedItem.let { item -> cartManager.removeFromCart(item) }
                 selectedItem.isInCart = false
 
                 setCartButtonColorAndImage(selectedItem)

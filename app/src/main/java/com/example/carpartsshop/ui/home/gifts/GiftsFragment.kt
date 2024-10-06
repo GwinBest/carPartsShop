@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.carpartsshop.databinding.FragmentGiftsBinding
-import com.example.carpartsshop.ui.home.bestselling.BestSellingFragment
 
 class GiftsFragment : Fragment() {
     private var _binding: FragmentGiftsBinding? = null
@@ -30,6 +29,6 @@ class GiftsFragment : Fragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance() = BestSellingFragment()
+        fun newInstance() = GiftsFragment()
     }
 }

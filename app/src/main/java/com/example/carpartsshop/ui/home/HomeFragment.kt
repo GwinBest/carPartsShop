@@ -50,7 +50,7 @@ class HomeFragment : Fragment() {
 
         binding.flSecondOnSaleItem.setOnClickListener {
             val action = HomeFragmentDirections.
-            actionHomeFragmentToSelectedCategoryFragment(binding.tvFirstOnSaleTitle.text.toString())
+            actionHomeFragmentToSelectedCategoryFragment(binding.tvSecondOnSaleTitle.text.toString())
             findNavController().navigate(action)
         }
     }

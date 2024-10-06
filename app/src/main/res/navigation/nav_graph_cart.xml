@@ -10,6 +10,19 @@
         android:name="com.example.carpartsshop.ui.cart.CartFragment"
         android:label="CartFragment"
         tools:layout="@layout/fragment_cart">
+        <action
+            android:id="@+id/action_CartFragment_to_ProductDescription"
+            app:destination="@id/ProductDescription" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ProductDescription"
+        android:name="com.example.carpartsshop.ui.home.productdescription.ProductDescriptionFragment"
+        android:label="ProductDescription"
+        tools:layout="@layout/fragment_product_description">
+        <argument
+            android:name="selectedCategoryItem"
+            app:argType="com.example.carpartsshop.ui.home.selectedCategory.SelectedCategoryItem" />
     </fragment>
 
 </navigation>

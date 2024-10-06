@@ -34,7 +34,11 @@ class CategoriesFragment :
         categories = resources.getStringArray(R.array.categories).toList()
 
         binding.rvCategories.layoutManager = LinearLayoutManager(context)
-        binding.rvCategories.adapter = CategoriesAdapter(categories, this)
+        binding.rvCategories.adapter =
+            CategoriesAdapter(
+                categories,
+                this
+            )
 
         binding.btnBack.setOnClickListener {
             findNavController().popBackStack()
