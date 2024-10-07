@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.carpartsshop.R
 
 class SelectedCategoriesAdapter(
@@ -46,9 +47,11 @@ class SelectedCategoriesAdapter(
     }
 
     override fun onBindViewHolder(holder: SelectedCategoriesViewHolder, position: Int) {
-            //holder.image
+        Glide.with(holder.itemView.context)
+            .load(products[position].titleImage)
+            .into(holder.image)
             holder.title.text = products[position].name
-            holder.price.text = products[position].price.toString()
+            holder.price.text = products[position].price
     }
 
     @SuppressLint("NotifyDataSetChanged")

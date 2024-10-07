@@ -11,6 +11,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.bumptech.glide.Glide
 import com.example.carpartsshop.R
 import com.example.carpartsshop.databinding.FragmentProductDescriptionBinding
 import com.example.carpartsshop.ui.cart.CartManager
@@ -64,8 +65,6 @@ class ProductDescriptionFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        selectedItem = args.selectedCategoryItem
-
         binding.btnBack.setOnClickListener {
             findNavController().popBackStack()
         }
@@ -75,7 +74,19 @@ class ProductDescriptionFragment : Fragment() {
         setCartButtonColorAndImage(selectedItem)
         setFavoritesButtonColorAndImage(selectedItem)
 
+        Glide.with(this)
+            .load(selectedItem.titleImage)
+            .into(binding.ivProductImage)
+
         binding.tvProductName.text = selectedItem.name
+
+        binding.tvValue1.text = selectedItem.value1
+        binding.tvValue2.text = selectedItem.value2
+        binding.tvValue3.text = selectedItem.value3
+        binding.tvValue4.text = selectedItem.value5
+        binding.tvValue5.text = selectedItem.value6
+        binding.tvValue6.text = selectedItem.value7
+        binding.tvValue7.text = selectedItem.value8
 
         val arrayId: Int? = when (selectedItem.type.toString()) {
             ProductType.TIRES.toString() -> R.array.tires_description

@@ -45,7 +45,7 @@ class CartFragment :
         val favoritesList = cartsManager.getCart()
 
         binding.tvItemsInCart.text = "(${favoritesList.count()})"
-        binding.tvPrice.text = favoritesList.sumOf { it.price }.toString()
+        binding.tvPrice.text = favoritesList.sumOf { it.price.toInt() }.toString()
 
         cartAdapter =
             CartAdapter(favoritesList, this)
@@ -116,7 +116,7 @@ class CartFragment :
         val favoritesList = cartsManager.getCart()
 
         binding.tvItemsInCart.text = "(${favoritesList.count()})"
-        binding.tvPrice.text = favoritesList.sumOf { it.price }.toString()
+        binding.tvPrice.text = favoritesList.sumOf { it.price.toInt() }.toString()
 
         if (favoritesList.isEmpty()) {
             binding.rvProducts.visibility = View.GONE
@@ -148,7 +148,7 @@ class CartFragment :
         cartAdapter.updateData(favoritesList)
 
         binding.tvItemsInCart.text = "(${favoritesList.count()})"
-        binding.tvPrice.text = favoritesList.sumOf { it.price }.toString()
+        binding.tvPrice.text = favoritesList.sumOf { it.price.toInt() }.toString()
 
         if (favoritesList.isEmpty()) {
             binding.rvProducts.visibility = View.GONE

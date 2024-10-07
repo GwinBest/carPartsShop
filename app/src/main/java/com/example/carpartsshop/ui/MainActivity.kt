@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.example.carpartsshop.R
 import com.example.carpartsshop.databinding.ActivityMainBinding
+import com.example.carpartsshop.repository.FirebaseDatabaseManager
 
 class MainActivity : AppCompatActivity() {
     private var _binding: ActivityMainBinding? = null
@@ -19,6 +20,8 @@ class MainActivity : AppCompatActivity() {
 
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        FirebaseDatabaseManager.getInstance().getItems()
 
         setupViewPager()
 

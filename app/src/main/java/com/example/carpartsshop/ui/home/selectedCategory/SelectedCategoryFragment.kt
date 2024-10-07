@@ -7,12 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.carpartsshop.R
 import com.example.carpartsshop.databinding.FragmentSelectedCategoryBinding
+import com.example.carpartsshop.repository.FirebaseDatabaseManager
 
 class SelectedCategoryFragment:
     Fragment(),
@@ -23,11 +23,15 @@ class SelectedCategoryFragment:
 
     private val args: SelectedCategoryFragmentArgs by navArgs()
 
-    private val categoryNameBundleKey = "CATEGORY_NAME"
     private var categoryName: String? = null
 
     private var isSortingAscending = true
 
+    private var products: List<SelectedCategoryItem>
+
+    init {
+        products = FirebaseDatabaseManager.getInstance().getItems().toMutableList()
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -61,31 +65,6 @@ class SelectedCategoryFragment:
 
     private fun setupUI() {
         binding.tvTitle.text = categoryName
-
-        val products = listOf(SelectedCategoryItem(
-            titleImage = 1,
-            name = "Smartphone",
-            price = 500,
-            type = ProductType.ENGINE
-        ),
-        SelectedCategoryItem(
-            titleImage = 1,
-            name = "T-Shirt",
-            price = 20,
-            type = ProductType.ENGINE
-        ),
-        SelectedCategoryItem(
-            titleImage = 1,
-            name = "Pizza",
-            price = 15,
-            type = ProductType.ENGINE
-        ),
-        SelectedCategoryItem(
-            titleImage = 1,
-            name = "Book",
-            price = 10,
-            type = ProductType.ENGINE
-        ))
 
         val productType = categoryName?.let {
             ProductType.valueOf(it.replace(" ", "_").uppercase())

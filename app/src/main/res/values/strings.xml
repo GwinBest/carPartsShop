@@ -6,9 +6,9 @@
     <string name="content_description_favorites_button">favorites button</string>
     <string name="title_favorites">favorites</string>
     <string name="content_description_gifts_button">gifts button</string>
-    <string name="title_gifts">gifts</string>
+    <string name="title_gifts">Gifts</string>
     <string name="content_description_best_selling_button">best_selling button</string>
-    <string name="title_best_selling">best selling</string>
+    <string name="title_best_selling">Best selling</string>
     <string name="title_sale">On sale</string>
     <string name="title_sale_percent" translatable="false">50%</string>
     <string name="content_description_first_on_sale_item_button">first on sale item button</string>

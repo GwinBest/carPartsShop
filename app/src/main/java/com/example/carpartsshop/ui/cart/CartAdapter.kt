@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.PopupMenu
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.carpartsshop.R
 import com.example.carpartsshop.ui.home.selectedCategory.SelectedCategoryItem
 
@@ -69,8 +70,11 @@ class CartAdapter(
     }
 
     override fun onBindViewHolder(holder: CartAdapter.CartAdapterViewHolder, position: Int) {
+        Glide.with(holder.itemView.context)
+            .load(cartList[position].titleImage)
+            .into(holder.image)
         holder.title.text = cartList[position].name
-        holder.price.text = cartList[position].price.toString()
+        holder.price.text = cartList[position].price
     }
 
     @SuppressLint("NotifyDataSetChanged")

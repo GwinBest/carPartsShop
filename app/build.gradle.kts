@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id ("androidx.navigation.safeargs")
-    alias(libs.plugins.google.gms.google.services)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -45,6 +45,13 @@ android {
 }
 
 dependencies {
+    implementation ("com.github.bumptech.glide:glide:4.12.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
+    implementation ("com.google.firebase:firebase-database:21.0.0")
+    implementation(platform(libs.firebase.bom))
+    implementation (libs.firebase.analytics )
+    implementation (libs.kotlin.stdlib)
+    implementation (libs.google.firebase.database.ktx)
     implementation(libs.androidx.databinding.runtime)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.carpartsshop.R
 import com.example.carpartsshop.ui.home.selectedCategory.SelectedCategoryItem
 
@@ -47,6 +48,9 @@ class FavoritesAdapter(
     }
 
     override fun onBindViewHolder(holder: FavoritesAdapterViewHolder, position: Int) {
+        Glide.with(holder.itemView.context)
+            .load(favorites[position].titleImage)
+            .into(holder.image)
         holder.title.text = favorites[position].name
         holder.price.text = favorites[position].price.toString()
     }
