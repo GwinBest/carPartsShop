@@ -17,6 +17,12 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        externalNativeBuild {
+            cmake {
+                cppFlags.add("-std=c++11")
+            }
+        }
     }
 
     buildTypes {
@@ -41,6 +47,12 @@ android {
     buildFeatures {
         viewBinding = true
         dataBinding = true
+    }
+
+    externalNativeBuild {
+        cmake {
+            path = file("src/main/cpp/CMakeLists.txt")
+        }
     }
 }
 
