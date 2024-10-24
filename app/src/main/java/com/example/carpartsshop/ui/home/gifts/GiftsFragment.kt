@@ -8,16 +8,6 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.carpartsshop.databinding.FragmentGiftsBinding
 
-class NativeLib {
-    external fun stringFromJNI(): String
-
-    companion object {
-        init {
-            System.loadLibrary("native-lib")
-        }
-    }
-}
-
 class GiftsFragment : Fragment() {
     private var _binding: FragmentGiftsBinding? = null
     private val binding
@@ -34,8 +24,6 @@ class GiftsFragment : Fragment() {
             findNavController().popBackStack()
         }
 
-        binding.tvNothingHere.text = NativeLib().stringFromJNI()
-        
         return binding.root
     }
 

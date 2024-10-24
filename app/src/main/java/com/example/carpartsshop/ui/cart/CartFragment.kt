@@ -134,6 +134,16 @@ class CartFragment :
         findNavController().navigate(action)
     }
 
+    class NativeLib {
+        companion object {
+            init {
+                System.loadLibrary("native-lib")
+            }
+        }
+    }
+
+    external fun stringFromJNI(prices: IntArray): String
+
     @SuppressLint("SetTextI18n")
     override fun onItemDelete(item: SelectedCategoryItem) {
         val sharedPreferences = requireContext().getSharedPreferences(
@@ -147,8 +157,10 @@ class CartFragment :
         val favoritesList = cartsManager.getCart()
         cartAdapter.updateData(favoritesList)
 
+        val prices = favoritesList.map { it.price.toInt() }.toIntArray()
+
         binding.tvItemsInCart.text = "(${favoritesList.count()})"
-        binding.tvPrice.text = favoritesList.sumOf { it.price.toInt() }.toString()
+        binding.tvPrice.text = CartFragment().stringFromJNI(prices)
 
         if (favoritesList.isEmpty()) {
             binding.rvProducts.visibility = View.GONE
