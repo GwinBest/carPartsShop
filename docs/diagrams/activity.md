@@ -13,8 +13,8 @@
 
 ### 2. Добавление в с корзину<a name="2"></a>
 
-![Добавление новой транзакции](https://github.com/GwinBest/carPartsShop/tree/main/docs/diagrams/img/addToCart.png)
+![Добавление новой транзакции]([https://github.com/GwinBest/carPartsShop/tree/main/docs/diagrams/img/addToCart.png](https://github.com/GwinBest/carPartsShop/blob/main/docs/diagrams/img/addToCart.png))
 
 ### 3. Удаление из списка желаемого<a name="3"></a>
 
-![Просмотр истории по месяцу](https://github.com/GwinBest/carPartsShop/tree/main/docs/img/RemoveFromFav.png)
+![Просмотр истории по месяцу]([https://github.com/GwinBest/carPartsShop/tree/main/docs/img/RemoveFromFav.png](https://github.com/GwinBest/carPartsShop/blob/main/docs/diagrams/img/RemoveFromFav.png))
