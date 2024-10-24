@@ -2,8 +2,8 @@
 
 # Содержание
 1. [Авторизация](#1)
-2. [Добавление новой транзакции](#2)
-3. [Просмотр истории по месяцу](#3)
+2. [Добавление товара в карзину](#2)
+3. [Удаление из списка желаемого](#3)
 
 
 ### 1. Авторизация<a name="1"></a>
@@ -12,8 +12,8 @@
 
 ### 2. Добавление новой транзакции<a name="2"></a>
 
-![Добавление новой транзакции](https://github.com/GwinBest/carPartsShop/blob/main/docs/diagrams/img/addSequence.png)
+![Добавление товара в карзину](https://github.com/GwinBest/carPartsShop/blob/main/docs/diagrams/img/addSequence.png)
   
 ### 3. Просмотр истории по месяцу<a name="3"></a>
 
-![Просмотр истории по месяцу](https://github.com/GwinBest/carPartsShop/blob/main/docs/diagrams/img/RemoveSequence.png)
+![Удаление из списка желаемого](https://github.com/GwinBest/carPartsShop/blob/main/docs/diagrams/img/RemoveSequence.png)
