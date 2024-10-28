@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "710711926822",
+    "firebase_url": "https://carpartsshop-ba49d-default-rtdb.firebaseio.com",
+    "project_id": "carpartsshop-ba49d",
+    "storage_bucket": "carpartsshop-ba49d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710711926822:android:ddcd8bcf8faf77444746e7",
+        "android_client_info": {
+          "package_name": "com.example.carpartsshop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5iO6EKnONIP3-0HXheThCzEkcAyaSdBc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
